@@ -13,9 +13,16 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+# Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl.recovery \
-    bootctrl.mt6879
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.mt6895 \
+    bootctrl.mt6895.recovery \
+    android.hardware.boot@1.0-service
+
+PRODUCT_PACKAGES += \
+    bootctrl 
 
 
 PRODUCT_PACKAGES += \
